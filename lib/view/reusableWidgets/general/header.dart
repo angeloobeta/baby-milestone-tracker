@@ -55,10 +55,7 @@ Widget subHeading(BuildContext context, String text) {
 // tab page heading
 class TabHeading extends StatelessWidget {
   final String title;
-  final String navigationPath;
-
-  const TabHeading(
-      {super.key, required this.title, required this.navigationPath});
+  const TabHeading({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +70,6 @@ class TabHeading extends StatelessWidget {
             GestureDetector(
                 onTap: () {
                   // get the path to were the navigation came from
-                  backButtonRedirectBucket = navigationPath;
                   Scaffold.of(context).openDrawer();
                 },
                 child:

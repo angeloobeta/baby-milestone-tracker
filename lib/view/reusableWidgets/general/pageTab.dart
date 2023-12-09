@@ -43,24 +43,11 @@ Widget pageTab(BuildContext context, {double? top, TabEnum? tabEnum}) {
                   : "inventoryUnselected",
               isSelected: tabEnum == TabEnum.inventory ? true : false,
               left: 99,
-              label: "Inventory",
+              label: "MileStone",
               navigation: tabEnum == TabEnum.inventory
                   ? () {}
                   : () {
                       router.goNamed("inventoryPageRoute");
-                    }),
-          // payments page
-          tabWidget(context,
-              image: tabEnum == TabEnum.payments
-                  ? "paymentsSelected"
-                  : "paymentsUnselected",
-              isSelected: tabEnum == TabEnum.payments ? true : false,
-              left: 172,
-              label: "Payments",
-              navigation: tabEnum == TabEnum.payments
-                  ? () {}
-                  : () {
-                      router.goNamed("paymentPageRoute");
                     }),
 
           // statistics page
@@ -70,7 +57,7 @@ Widget pageTab(BuildContext context, {double? top, TabEnum? tabEnum}) {
                   : "statisticsUnselected",
               isSelected: tabEnum == TabEnum.statistics ? true : false,
               right: 100,
-              label: "Statistics",
+              label: "Settings",
               navigation: tabEnum == TabEnum.statistics
                   ? () {}
                   : () {
