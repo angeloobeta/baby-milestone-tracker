@@ -84,7 +84,7 @@ class DashboardPage extends StatelessWidget {
                   ),
                 ),
               ),
-              pageTab(context)
+              pageTab(context, tabEnum: TabEnum.dashboard)
             ]));
   }
 }

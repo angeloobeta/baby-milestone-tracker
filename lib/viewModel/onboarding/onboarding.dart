@@ -16,24 +16,24 @@ class OnBoardingViewModel extends BaseModel {
   List<OnBoardingModel> onBoardSlide = [
     OnBoardingModel(
         image: "expecting",
-        title: "Effortless Ordering",
+        title: "Track Key Developmental Milestones",
         subtitle:
-            "Order your favorite meals with a few taps, anytime, anywhere"),
+            "Stay Informed, Every Step of the Way. Record and Monitor Your Baby's Growth and Achievements effortlessly"),
     OnBoardingModel(
         image: "motherhood",
-        title: "Effortless Ordering",
+        title: "Personalized Insights Just for You",
         subtitle:
-            "Order your favorite meals with a few taps, anytime, anywhere"),
+            "Tailored Guidance for Your Unique Baby. Receive Expert Tips and Advice Based on Your Baby's Developmental"),
     OnBoardingModel(
         image: "quality_time",
-        title: "Effortless Ordering",
+        title: "Memories That Last a Lifetime",
         subtitle:
-            "Order your favorite meals with a few taps, anytime, anywhere"),
+            "Create a Time Capsule of Cherished Moments. Turn Every Baby Milestone into a Beautiful Memory to Treasure Forever"),
     OnBoardingModel(
         image: "toy_car",
-        title: "Effortless Ordering",
+        title: "Seamless and Intuitive Experience",
         subtitle:
-            "Order your favorite meals with a few taps, anytime, anywhere"),
+            "Effortless Journey Through Parenthood. Enjoy an Intuitive Interface for Stress-Free Tracking and Joyful Parenting"),
   ];
   // default index
   int index = 0;

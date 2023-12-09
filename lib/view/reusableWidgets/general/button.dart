@@ -1,7 +1,5 @@
 // this is the type of button used across the application
 
-
-
 import '../../../model/utilities/imports/generalImport.dart';
 
 // is to be used in stack widget
@@ -43,11 +41,12 @@ Widget button(context,
 
 // is to be used in column, rows and other grid element
 Widget buttonNoPositioned(BuildContext context,
-    { String? text='No text',
+    {String? text = 'No text',
     String? navigateTo,
     double? radius,
     Color? buttonColor,
-    Color? textColor,Color?  borderColor,
+    Color? textColor,
+    Color? borderColor,
     Function? navigator,
     double? width,
     FontWeight? fontWeight,
@@ -55,26 +54,24 @@ Widget buttonNoPositioned(BuildContext context,
     Widget? widget,
     double? height}) {
   return ButtonWidget(
-    navigator??
+    navigator ??
         () {
           // know your customer page
           if (navigateTo != null) {
             // set the back button route
-            backButtonRedirectBucket=navigateTo;
+            backButtonRedirectBucket = navigateTo;
             context.goNamed(navigateTo);
           }
         },
-        
     buttonColor ?? primary400,
     width ?? 400,
     height ?? 47,
     widget ??
-        RalewayText(text!, textColor ?? white, 1, fontSize??14,
-            fontWeight ?? FontWeight.w400, text),
+        RalewayText(text!, textColor ?? white, 1, fontSize ?? 14,
+            fontWeight ?? FontWeight.w500, text),
     Alignment.center,
     radius ?? 6,
     noElevation: 0,
     borderColor: borderColor,
-    
   );
 }

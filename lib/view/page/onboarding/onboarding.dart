@@ -16,7 +16,7 @@ class OnBoardingPage extends StatelessWidget {
                       ? rowPositioned(
                           top: 70,
                           child: S(
-                            w: 360,
+                            w: 410,
                             h: sS(context).h,
                             child: PageView.builder(
                                 scrollDirection: Axis.horizontal,
@@ -27,29 +27,35 @@ class OnBoardingPage extends StatelessWidget {
                                       children: [
                                         rowPositioned(
                                           top: 10,
-                                          child: Expanded(
-                                            child: FittedBox(
-                                              child: SvgImage(
-                                                path:
-                                                    "onboarding/${model.onBoardSlide.elementAt(index).image}",
-                                                height: 380,
-                                                width: 300,
+                                          // left: 10,
+                                          // right: 10,
+                                          child: Container(
+                                              height:
+                                                  sS(context).cH(height: 360),
+                                              width: sS(context).cW(width: 350),
+                                              child: SvgPicture.asset(
+                                                  "assets/svg/onboarding/${model.onBoardSlide.elementAt(index).image}.svg")
+
+                                              // SvgImage(
+                                              //   path:
+                                              //       "onboarding/${model.onBoardSlide.elementAt(index).image}",
+                                              //   height: 360,
+                                              //   width: 250,
+                                              // ),
                                               ),
-                                            ),
-                                          ),
                                         ),
                                         S(h: 22),
                                         rowPositioned(
                                           top: 410,
                                           child: S(
-                                            h: 38,
-                                            w: 276,
+                                            h: 150,
+                                            w: 300,
                                             child: GeneralTextDisplay(
                                               model.onBoardSlide
                                                   .elementAt(index)
                                                   .title!,
                                               hexColor("010F07"),
-                                              1,
+                                              2,
                                               24,
                                               FontWeight.w700,
                                               "onboarding",
@@ -57,18 +63,17 @@ class OnBoardingPage extends StatelessWidget {
                                             ),
                                           ),
                                         ),
-                                        S(h: 37),
                                         rowPositioned(
-                                          top: 456 + 10,
+                                          top: 456 + 50,
                                           child: S(
-                                            h: 52,
-                                            w: 331,
+                                            h: 120,
+                                            w: 330,
                                             child: GeneralTextDisplay(
                                               model.onBoardSlide
                                                   .elementAt(index)
                                                   .subtitle!,
                                               hexColor("767676"),
-                                              2,
+                                              6,
                                               16,
                                               FontWeight.normal,
                                               "onboarding",
@@ -78,7 +83,7 @@ class OnBoardingPage extends StatelessWidget {
                                         ),
                                         S(h: 87),
                                         rowPositioned(
-                                          top: 579,
+                                          top: 579 + 30,
                                           child: Center(
                                             child: SmoothPageIndicator(
                                                 controller:
@@ -103,7 +108,8 @@ class OnBoardingPage extends StatelessWidget {
                                                 ? buttonNoPositioned(context,
                                                     width: 340,
                                                     height: 58,
-                                                    text: "Continue",
+                                                    fontSize: 16,
+                                                    text: "Next",
                                                     navigator: () => model
                                                         .pageController
                                                         .nextPage(
@@ -115,18 +121,19 @@ class OnBoardingPage extends StatelessWidget {
                                                                 .easeInOut),
                                                     buttonColor: pink,
                                                     textColor: white)
-                                                : (model.onBoardSlide.length - 1 ==
+                                                : (model.onBoardSlide.length -
+                                                            1 ==
                                                         index)
                                                     ? buttonNoPositioned(context,
                                                         width: 340,
                                                         height: 58,
-                                                        text: "Continue",
+                                                        text: "Done",
+                                                        fontSize: 16,
                                                         navigator: () {
                                                         router.goNamed(
                                                             dashboardPageRoute);
                                                       },
-                                                        buttonColor:
-                                                            hexColor("FF5733"),
+                                                        buttonColor: pink,
                                                         textColor: white)
                                                     : S())
                                       ],
@@ -137,11 +144,11 @@ class OnBoardingPage extends StatelessWidget {
                           top: 50,
                           child: S(
                             h: 743,
-                            w: 360,
+                            w: 410,
                             child: Stack(
                               children: [
                                 S(
-                                    w: 359,
+                                    w: 400,
                                     h: 415,
                                     child: SvgPicture.asset(
                                       "assets/svg/onboarding/baby.svg",
@@ -151,33 +158,41 @@ class OnBoardingPage extends StatelessWidget {
                                   top: 415,
                                   child: S(
                                     h: 328,
-                                    w: 359,
+                                    w: 400,
                                     child: Container(
                                       color: white,
                                       child: Stack(
                                         children: [
                                           rowPositioned(
                                             top: sS(context).cH(height: 61),
-                                            child: GeneralTextDisplay(
-                                              "Welcome",
-                                              hexColor("010F07"),
-                                              1,
-                                              24,
-                                              FontWeight.w700,
-                                              "onboarding",
-                                              textAlign: TextAlign.center,
+                                            child: S(
+                                              w: 390,
+                                              h: 100,
+                                              child: GeneralTextDisplay(
+                                                "Welcome to Baby Milestones Tracker",
+                                                hexColor("010F07"),
+                                                2,
+                                                24,
+                                                FontWeight.w700,
+                                                "onboarding",
+                                                textAlign: TextAlign.center,
+                                              ),
                                             ),
                                           ),
                                           rowPositioned(
-                                            top: 117,
-                                            child: GeneralTextDisplay(
-                                              "Discover a world of culinary delights \nright at your fingertips.",
-                                              hexColor("767676"),
-                                              2,
-                                              16,
-                                              FontWeight.normal,
-                                              "onboarding",
-                                              textAlign: TextAlign.center,
+                                            top: 140,
+                                            child: S(
+                                              h: 120,
+                                              w: 320,
+                                              child: GeneralTextDisplay(
+                                                "Embark on the Journey of Parenthood. Capture and Celebrate Every Precious Moment with Your Little One",
+                                                hexColor("767676"),
+                                                5,
+                                                16,
+                                                FontWeight.normal,
+                                                "onboarding",
+                                                textAlign: TextAlign.center,
+                                              ),
                                             ),
                                           ),
                                           button(context,
@@ -187,7 +202,7 @@ class OnBoardingPage extends StatelessWidget {
                                               text: "Get started",
                                               navigator: () {
                                             model.onStartOnboarding(context);
-                                          }, top: 255)
+                                          }, top: 265)
                                         ],
                                       ),
                                     ),
