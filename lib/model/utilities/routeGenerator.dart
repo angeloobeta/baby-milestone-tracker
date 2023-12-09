@@ -1,4 +1,5 @@
 import 'package:baby_milestones_tracker/view/page/dashboard/dashboard.dart';
+import 'package:baby_milestones_tracker/view/page/mileStone/allMileStone.dart';
 
 import 'imports/generalImport.dart';
 
@@ -23,5 +24,10 @@ final router = GoRouter(
         name: dashboardPageRoute,
         path: '/',
         builder: (context, state) => const DashboardPage()),
+
+    GoRoute(
+        name: mileStonePageRoute,
+        path: '/mileStonePageRoute',
+        builder: (context, state) => AllMileStonePage()),
   ],
 );

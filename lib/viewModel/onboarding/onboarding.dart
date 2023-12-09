@@ -5,10 +5,10 @@ import '../../model/models/onBoardingModel.dart';
 class OnBoardingViewModel extends BaseModel {
   PageController pageController = PageController();
 
-  bool Start = false;
+  bool startOnboarding = false;
 
   onStartOnboarding(context) {
-    Start = true;
+    startOnboarding = true;
     notifyListeners();
   }
 
@@ -40,7 +40,6 @@ class OnBoardingViewModel extends BaseModel {
 
   updateIndex(value) {
     index = value;
-    print("The  length of onBoardingServices is ======>" + "");
     notifyListeners();
   }
 }

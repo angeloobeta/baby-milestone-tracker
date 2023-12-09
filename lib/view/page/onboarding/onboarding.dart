@@ -12,7 +12,7 @@ class OnBoardingPage extends StatelessWidget {
             BaseUi(allowBackButton: false, safeTop: false, children: [
               // image
               Visibility(
-                  child: (model.Start == true)
+                  child: (model.startOnboarding == true)
                       ? rowPositioned(
                           top: 70,
                           child: S(

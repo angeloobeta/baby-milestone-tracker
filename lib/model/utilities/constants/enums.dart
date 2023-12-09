@@ -1,7 +1,7 @@
 // enums acting like state
 
 // page tab enum
-enum TabEnum { dashboard, inventory, payments, statistics }
+enum TabEnum { dashboard, milestone, payments, statistics }
 
 enum ObscureTextEnum { confirmPassword, password }
 

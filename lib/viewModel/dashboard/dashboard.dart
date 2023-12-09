@@ -15,7 +15,6 @@ class DashBoardViewModel extends BaseModel {
   triggerSeeMoreFood(context) {
     seeMore = !seeMore;
     notifyListeners();
-    print("It was trigger now");
   }
 
   List<String> carouselList = [

@@ -20,7 +20,6 @@ processLongDouble(
       int.parse(processString.split('.')[1]) == 0) {
     processString = processString.split('.')[0];
   }
-  ;
   return processString.length > maximumStringLength
       ? displayWithComma(
           k_m_b_generator(double.parse(unProcessedDoubleString.toString())))

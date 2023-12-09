@@ -2,6 +2,8 @@ import 'package:baby_milestones_tracker/model/utilities/imports/generalImport.da
 import 'package:baby_milestones_tracker/viewModel/dashboard/dashboard.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
+import '../mileStone/mileStoneDetail.dart';
+
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
 
@@ -15,7 +17,7 @@ class DashboardPage extends StatelessWidget {
               rowPositioned(
                   top: 105,
                   left: 10,
-                  child: GeneralTextDisplay(
+                  child: const GeneralTextDisplay(
                       "Hi Welcome to Baby Milestone Tracker",
                       pink,
                       1,
@@ -28,6 +30,7 @@ class DashboardPage extends StatelessWidget {
                   right: 0,
                   bottom: sS(context).cH(height: 50),
                   child: SingleChildScrollView(
+                    physics: const BouncingScrollPhysics(),
                     child: S(
                       h: 900,
                       w: 430,
@@ -39,7 +42,7 @@ class DashboardPage extends StatelessWidget {
                             right: 10,
                             child: S(
                               h: 250,
-                              w: sS(context).cW(width: 410),
+                              w: 410,
                               child: Stack(
                                 children: [
                                   Positioned(
@@ -114,66 +117,101 @@ class DashboardPage extends StatelessWidget {
                             ),
                           ),
                           rowPositioned(
-                            top: 440 - 150,
+                            top: 460 - 150,
                             child: Container(
-                              height: sS(context).cH(height: 470),
+                              height: sS(context).cH(height: 390),
                               width: sS(context).cW(width: 410),
-                              child: GridView.builder(
-                                gridDelegate:
-                                    SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 3,
-                                  crossAxisSpacing: sS(context).cH(height: 8.0),
-                                  mainAxisSpacing: sS(context).cH(height: 8.0),
-                                ),
-                                itemCount: model.milestoneCategories.length,
-                                itemBuilder: (BuildContext context, int index) {
-                                  String category = model
-                                      .milestoneCategories.keys
-                                      .elementAt(index);
-                                  List<String> options =
-                                      model.milestoneCategories[category]!;
-                                  String backgroundImage =
-                                      model.getRandomImage();
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  GridView.builder(
+                                    shrinkWrap: true,
+                                    gridDelegate:
+                                        SliverGridDelegateWithFixedCrossAxisCount(
+                                      crossAxisCount: 3,
+                                      crossAxisSpacing:
+                                          sS(context).cH(height: 8.0),
+                                      mainAxisSpacing:
+                                          sS(context).cH(height: 8.0),
+                                    ),
+                                    itemCount:
+                                        model.milestoneCategories.length - 3,
+                                    itemBuilder:
+                                        (BuildContext context, int index) {
+                                      String category = model
+                                          .milestoneCategories.keys
+                                          .elementAt(index);
+                                      List<String> options =
+                                          model.milestoneCategories[category]!;
+                                      String backgroundImage =
+                                          model.getRandomImage();
 
-                                  return GestureDetector(
-                                    onTap: () {
-                                      // Add your onTap logic here
-                                      print("Selected Category: $category");
-                                      print("Options: $options");
-                                    },
-                                    child: Card(
-                                      elevation: 2.0,
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(12.0),
-                                      ),
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                            image: AssetImage(
-                                                "assets/png/dashboard/$backgroundImage"),
-                                            colorFilter: ColorFilter.mode(
-                                              Colors.black.withOpacity(
-                                                  0.15), // Adjust opacity as needed
-                                              BlendMode.dstATop,
+                                      return GestureDetector(
+                                        onTap: () {
+                                          // Add your onTap logic here
+                                          print("Selected Category: $category");
+                                          print("Options: $options");
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      MileStoneDetailPage(
+                                                        title: category,
+                                                        milesOption: options,
+                                                      )));
+                                          // router.goNamed('');
+                                        },
+                                        child: Card(
+                                          elevation: 2.0,
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(12.0),
+                                          ),
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                              image: DecorationImage(
+                                                image: AssetImage(
+                                                    "assets/png/dashboard/$backgroundImage"),
+                                                colorFilter: ColorFilter.mode(
+                                                  Colors.black.withOpacity(
+                                                      0.15), // Adjust opacity as needed
+                                                  BlendMode.dstATop,
+                                                ),
+                                                fit: BoxFit.cover,
+                                              ),
                                             ),
-                                            fit: BoxFit.cover,
+                                            child: Center(
+                                                child: GeneralTextDisplay(
+                                              category,
+                                              black,
+                                              3,
+                                              16,
+                                              FontWeight.w600,
+                                              '',
+                                              textAlign: TextAlign.center,
+                                            )),
                                           ),
                                         ),
-                                        child: Center(
-                                            child: GeneralTextDisplay(
-                                          category,
+                                      );
+                                    },
+                                  ),
+                                  S(
+                                    h: 30,
+                                    w: 100,
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        router.goNamed(mileStonePageRoute);
+                                      },
+                                      child: const GeneralTextDisplay(
+                                          "See More",
                                           black,
-                                          3,
-                                          16,
+                                          1,
+                                          18,
                                           FontWeight.w600,
-                                          '',
-                                          textAlign: TextAlign.center,
-                                        )),
-                                      ),
+                                          ""),
                                     ),
-                                  );
-                                },
+                                  )
+                                ],
                               ),
                             ),
                           ),

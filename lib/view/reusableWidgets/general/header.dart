@@ -19,13 +19,10 @@ Widget header(BuildContext context, String text,
                     navigateTo: navigateTo ?? backButtonRedirectBucket),
                 S(w: 10),
                 S(
-                  w: 180,
+                  w: 350,
                   h: 25,
                   child: RalewayText(
-                    processLongString(
-                        unProcessedString: text,
-                        minimumStringLength: 19,
-                        substringLength: 17),
+                    text,
                     appBlack,
                     1,
                     18,
@@ -75,7 +72,7 @@ class TabHeading extends StatelessWidget {
                 child:
                     GeneralIconDisplay(Icons.menu, appBlack, UniqueKey(), 24)),
             // title
-            RalewayText(title, appBlack, 1, 16, FontWeight.w600, 'title'),
+            RalewayText(title, appBlack, 1, 18, FontWeight.w600, 'title'),
             // notification
             GestureDetector(
               onTap: () {

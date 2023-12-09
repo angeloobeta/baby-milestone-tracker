@@ -1,3 +1,3 @@
-import 'package:baby_milestones_tracker/model/utilities/imports/generalImport.dart';
+import 'package:baby_milestones_tracker/viewModel/dashboard/dashboard.dart';
 
-class MileStoneViewModel extends BaseModel {}
+class MileStoneViewModel extends DashBoardViewModel {}

@@ -38,16 +38,16 @@ Widget pageTab(BuildContext context, {double? top, TabEnum? tabEnum}) {
                     }),
           // inventory page
           tabWidget(context,
-              image: tabEnum == TabEnum.inventory
+              image: tabEnum == TabEnum.milestone
                   ? "inventorySelected"
                   : "inventoryUnselected",
-              isSelected: tabEnum == TabEnum.inventory ? true : false,
+              isSelected: tabEnum == TabEnum.milestone ? true : false,
               left: 99,
               label: "MileStone",
-              navigation: tabEnum == TabEnum.inventory
+              navigation: tabEnum == TabEnum.milestone
                   ? () {}
                   : () {
-                      router.goNamed("inventoryPageRoute");
+                      router.goNamed(mileStonePageRoute);
                     }),
 
           // statistics page

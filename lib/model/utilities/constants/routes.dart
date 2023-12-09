@@ -2,3 +2,4 @@
 
 const String onboardingPageRoute = 'onboardingPageRoute';
 const String dashboardPageRoute = 'dashboardPageRoute';
+const String mileStonePageRoute = 'mileStonePageRoute';
