@@ -34,28 +34,61 @@ class MileStoneDetailPage extends StatelessWidget {
                   child: GeneralIconDisplay(Icons.add, white, UniqueKey(), 40),
                 ),
                 children: [
-                  header(context, title),
+                  rowPositioned(
+                      top: 60,
+                      child: Row(
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).pop();
+                              print("We just pop it now");
+                            },
+                            child: const Icon(
+                              LineIcons.angleLeft,
+                              size: 24,
+                              color: appBlack,
+                            ),
+                          ),
+                          S(w: 10),
+                          S(
+                            w: 350,
+                            h: 25,
+                            child: RalewayText(
+                              title,
+                              appBlack,
+                              1,
+                              18,
+                              FontWeight.w600,
+                              '',
+                              letterSpacing: 0.18,
+                            ),
+                          ),
+                        ],
+                      )),
                   rowPositioned(
                     top: 60,
                     child: S(
                       h: 800,
                       w: 400,
-                      child: ListView.builder(
-                        itemCount: categoryMilestones.length,
-                        itemBuilder: (context, index) {
-                          final milestone = categoryMilestones[index];
-                          return Card(
-                            child: milestone.title == ""
-                                ? const Center(
-                                    child: GeneralTextDisplay(
-                                        "No miles has been recordered, the floating icon button to record a milestone for your baby",
-                                        black,
-                                        4,
-                                        14,
-                                        FontWeight.w600,
-                                        ""),
-                                  )
-                                : ListTile(
+                      child: categoryMilestones.isEmpty
+                          ? const Center(
+                              child: Padding(
+                                padding: EdgeInsets.all(20.0),
+                                child: GeneralTextDisplay(
+                                    "No miles has been reordered yet, the floating icon button to record a milestone for your baby",
+                                    black,
+                                    4,
+                                    18,
+                                    FontWeight.w600,
+                                    ""),
+                              ),
+                            )
+                          : ListView.builder(
+                              itemCount: categoryMilestones.length,
+                              itemBuilder: (context, index) {
+                                final milestone = categoryMilestones[index];
+                                return Card(
+                                  child: ListTile(
                                     title: GeneralTextDisplay(milestone.title,
                                         black, 1, 16, FontWeight.w500, ""),
                                     subtitle: GeneralTextDisplay(
@@ -65,10 +98,12 @@ class MileStoneDetailPage extends StatelessWidget {
                                         12,
                                         FontWeight.w400,
                                         ""),
+                                    trailing:
+                                        const Icon(Icons.delete_forever_sharp),
                                   ),
-                          );
-                        },
-                      ),
+                                );
+                              },
+                            ),
                     ),
                   )
                 ]));

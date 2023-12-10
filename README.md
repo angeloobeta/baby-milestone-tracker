@@ -18,16 +18,17 @@ Baby Milestones Tracker is an application designed to help parents keep track of
 
 
 <p align="center">
-  <img src="screenshots/image00004.png" width="200" alt="App Screenshot 1">
+
   <img src="screenshots/image00005.png" width="200" alt="App Screenshot 2">
   <img src="screenshots/image00006.png" width="200" alt="App Screenshot 3">
+  <img src="screenshots/image00003.png" width="200" alt="App Screenshot 3">
 </p>
 
 
 <p align="center">
   <img src="screenshots/image00001.png" width="200" alt="App Screenshot 1">
   <img src="screenshots/image00002.png" width="200" alt="App Screenshot 2">
-  <img src="screenshots/image00003.png" width="200" alt="App Screenshot 3">
+  <img src="screenshots/image00004.png" width="200" alt="App Screenshot 1">
 </p>
 
 ## Key Features

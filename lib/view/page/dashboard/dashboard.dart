@@ -54,7 +54,7 @@ class DashboardPage extends StatelessWidget {
                                       options: CarouselOptions(
                                         // height: sS(context).cH(height: 160.0),
                                         enlargeCenterPage: true,
-                                        autoPlay: false,
+                                        autoPlay: true,
                                         autoPlayCurve: Curves.fastOutSlowIn,
                                         enableInfiniteScroll: true,
                                         // autoPlayAnimationDuration:
