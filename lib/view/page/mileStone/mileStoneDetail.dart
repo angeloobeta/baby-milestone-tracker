@@ -66,45 +66,53 @@ class MileStoneDetailPage extends StatelessWidget {
                         ],
                       )),
                   rowPositioned(
-                    top: 60,
+                    top: 100,
                     child: S(
-                      h: 800,
-                      w: 400,
-                      child: categoryMilestones.isEmpty
-                          ? const Center(
-                              child: Padding(
-                                padding: EdgeInsets.all(20.0),
-                                child: GeneralTextDisplay(
-                                    "No miles has been reordered yet, the floating icon button to record a milestone for your baby",
-                                    black,
-                                    4,
-                                    18,
-                                    FontWeight.w600,
-                                    ""),
-                              ),
-                            )
-                          : ListView.builder(
-                              itemCount: categoryMilestones.length,
-                              itemBuilder: (context, index) {
-                                final milestone = categoryMilestones[index];
-                                return Card(
-                                  child: ListTile(
-                                    title: GeneralTextDisplay(milestone.title,
-                                        black, 1, 16, FontWeight.w500, ""),
-                                    subtitle: GeneralTextDisplay(
-                                        '${milestone.description} \n ${milestone.typeOfMilestone} \n${milestone.dateOfCreate}',
-                                        black,
-                                        6,
-                                        12,
-                                        FontWeight.w400,
-                                        ""),
-                                    trailing:
-                                        const Icon(Icons.delete_forever_sharp),
-                                  ),
-                                );
-                              },
-                            ),
-                    ),
+                        h: 800,
+                        w: 400,
+                        child: categoryMilestones.isEmpty
+                            ? const Center(
+                                child: Padding(
+                                  padding: EdgeInsets.all(20.0),
+                                  child: GeneralTextDisplay(
+                                      "No miles has been reordered yet, the floating icon button to record a milestone for your baby",
+                                      black,
+                                      4,
+                                      18,
+                                      FontWeight.w600,
+                                      ""),
+                                ),
+                              )
+                            : SingleChildScrollView(
+                                child: Column(
+                                  children: [
+                                    for (int index in List.generate(
+                                        categoryMilestones.length,
+                                        (index) => index)) ...[
+                                      Card(
+                                        child: ListTile(
+                                          title: GeneralTextDisplay(
+                                              categoryMilestones[index].title,
+                                              black,
+                                              1,
+                                              16,
+                                              FontWeight.w500,
+                                              ""),
+                                          subtitle: GeneralTextDisplay(
+                                              '${categoryMilestones[index].description} \n ${categoryMilestones[index].typeOfMilestone} \n${categoryMilestones[index].dateOfCreate}',
+                                              black,
+                                              6,
+                                              12,
+                                              FontWeight.w400,
+                                              ""),
+                                          trailing: const Icon(
+                                              Icons.delete_forever_sharp),
+                                        ),
+                                      )
+                                    ]
+                                  ],
+                                ),
+                              )),
                   )
                 ]));
   }
