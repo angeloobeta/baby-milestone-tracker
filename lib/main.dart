@@ -1,7 +1,13 @@
 import 'package:baby_milestones_tracker/model/utilities/imports/constantImport.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+import 'model/utilities/functions/setupHive.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // await Hive.initFlutter();
+  // await Hive.openBox<Milestone>('milestones');
+  await setupHive();
   runApp(const MyApp());
 }
 

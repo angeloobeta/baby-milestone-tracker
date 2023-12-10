@@ -151,6 +151,8 @@ class DashboardPage extends StatelessWidget {
                                           // Add your onTap logic here
                                           print("Selected Category: $category");
                                           print("Options: $options");
+                                          backButtonRedirectBucket =
+                                              dashboardPageRoute;
                                           Navigator.push(
                                               context,
                                               MaterialPageRoute(

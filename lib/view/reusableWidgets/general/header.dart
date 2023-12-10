@@ -1,10 +1,7 @@
 import '../../../model/utilities/imports/generalImport.dart';
 
 Widget header(BuildContext context, String text,
-    {String? navigateTo,
-    double? top,
-    Widget? widget,
-    MainAxisAlignment? mainAxisAlignment}) {
+    {double? top, Widget? widget, MainAxisAlignment? mainAxisAlignment}) {
   return rowPositioned(
       child: S(
         h: 30,
@@ -15,8 +12,17 @@ Widget header(BuildContext context, String text,
           children: [
             Row(
               children: [
-                backButtonNoPositioned(context,
-                    navigateTo: navigateTo ?? backButtonRedirectBucket),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    print("We just pop it now");
+                  },
+                  child: const Icon(
+                    LineIcons.angleLeft,
+                    size: 24,
+                    color: appBlack,
+                  ),
+                ),
                 S(w: 10),
                 S(
                   w: 350,

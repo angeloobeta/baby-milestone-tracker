@@ -14,7 +14,7 @@ class AllMileStonePage extends StatelessWidget {
             BaseUi(safeBottom: false, children: [
               const TabHeading(title: "Mile Stone Category"),
               rowPositioned(
-                  top: 50,
+                  top: 100,
                   child: S(
                     w: 400,
                     h: 800,

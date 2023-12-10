@@ -1,6 +1,7 @@
 import 'package:baby_milestones_tracker/viewModel/mileStone/addMileStone.dart';
 
 import '../../../model/utilities/imports/generalImport.dart';
+import 'mileStoneDetail.dart';
 
 class AddMileStonePage extends StatelessWidget {
   final String title;
@@ -78,8 +79,14 @@ class AddMileStonePage extends StatelessWidget {
                       buttonNoPositioned(context,
                           fontSize: 16,
                           height: 58,
-                          text: "Submit",
-                          buttonColor: pink)
+                          text: "Submit", navigator: () {
+                        model.onSaveMileStone(context, title);
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MileStoneDetailPage(
+                                    title: title, milesOption: milesOption)));
+                      }, buttonColor: pink)
                     ],
                   ))
             ]));
