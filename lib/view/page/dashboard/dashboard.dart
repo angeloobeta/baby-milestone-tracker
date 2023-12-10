@@ -123,6 +123,7 @@ class DashboardPage extends StatelessWidget {
                               width: sS(context).cW(width: 410),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.end,
+                                mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   GridView.builder(
                                     shrinkWrap: true,
