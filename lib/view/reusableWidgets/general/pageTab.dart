@@ -86,6 +86,7 @@ Widget tabWidget(context,
       children: [
         // dashboard page
         SvgPicture.asset("assets/svg/$image.svg",
+            color: isSelected ? pink : gray3,
             height: sS(context).cH(height: 22)),
         S(h: 10),
         //label

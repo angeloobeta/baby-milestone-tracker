@@ -75,7 +75,7 @@ class MileStoneDetailPage extends StatelessWidget {
                                 child: Padding(
                                   padding: EdgeInsets.all(20.0),
                                   child: GeneralTextDisplay(
-                                      "No miles has been reordered yet, the floating icon button to record a milestone for your baby",
+                                      "No miles has been reordered yet, press the pink button to record a milestone for your baby",
                                       black,
                                       4,
                                       18,
@@ -92,21 +92,35 @@ class MileStoneDetailPage extends StatelessWidget {
                                       Card(
                                         child: ListTile(
                                           title: GeneralTextDisplay(
-                                              categoryMilestones[index].title,
+                                              "Title: ${categoryMilestones[index].title}",
                                               black,
                                               1,
                                               16,
                                               FontWeight.w500,
                                               ""),
                                           subtitle: GeneralTextDisplay(
-                                              '${categoryMilestones[index].description} \n ${categoryMilestones[index].typeOfMilestone} \n${categoryMilestones[index].dateOfCreate}',
+                                              'Description: ${categoryMilestones[index].description} \nMile Stone: ${categoryMilestones[index].typeOfMilestone} \nDate of creation: ${categoryMilestones[index].dateOfCreate}',
                                               black,
                                               6,
                                               12,
                                               FontWeight.w400,
                                               ""),
-                                          trailing: const Icon(
-                                              Icons.delete_forever_sharp),
+                                          trailing: GestureDetector(
+                                            onTap: () {
+                                              model.onDeleteMileStone(
+                                                  context, index);
+                                              Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          MileStoneDetailPage(
+                                                              title: title,
+                                                              milesOption:
+                                                                  milesOption)));
+                                            },
+                                            child: const Icon(
+                                                Icons.delete_forever_sharp),
+                                          ),
                                         ),
                                       )
                                     ]
