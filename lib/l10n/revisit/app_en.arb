@@ -1,0 +1,81 @@
+{
+"image":
+["expectation",
+"motherhood",
+"quality_time",
+"toy_car"],
+
+"title": [
+"Track Key Developmental Milestones",
+"Personalized Insights Just for You",
+"Memories That Last a Lifetime",
+"Seamless and Intuitive Experience"
+],
+"subtitle": [
+"Stay Informed, Every Step of the Way. Record and Monitor Your Baby's Growth and Achievements effortlessly",
+"Tailored Guidance for Your Unique Baby. Receive Expert Tips and Advice Based on Your Baby's Developmental",
+ "Create a Time Capsule of Cherished Moments. Turn Every Baby Milestone into a Beautiful Memory to Treasure Forever",
+"Effortless Journey Through Parenthood. Enjoy an Intuitive Interface for Stress-Free Tracking and Joyful Parenting"
+],
+"milestoneCategory": {
+    "Physical Development": [
+      "Rolling Over",
+      "Sitting Up",
+      "Crawling",
+      "Standing",
+      "First Steps"
+    ],
+    "Cognitive Development": [
+      "Grasping Objects",
+      "Babbling",
+      "First Words",
+      "Recognizing Faces",
+      "Problem Solving"
+    ],
+    "Social and Emotional Development": [
+      "Smiling",
+      "Laughter",
+      "Expressing Emotions",
+      "Playing Peek-a-Boo",
+      "Forming Attachments"
+    ],
+    "Feeding and Nutrition": [
+      "First Solid Food",
+      "Self-Feeding",
+      "Transition to Cups",
+      "Introducing New Foods",
+      "Weaning"
+    ],
+    "Sleep Patterns": [
+      "Sleeping Through the Night",
+      "Establishing a Bedtime Routine",
+      "Transitioning to a Crib",
+      "Dropping Naps"
+    ],
+    "Health and Wellness": [
+      "Immunizations",
+      "Teething",
+      "First Illness",
+      "Growth Spurts",
+      "Motor Skills Development"
+    ],
+    "Speech and Language": [
+      "Babbling",
+      "First Words",
+      "Vocabulary Expansion",
+      "Sentence Formation",
+      "Language Comprehension"
+    ],
+    "Milestones with Siblings/Pets": [
+      "Sibling Interactions",
+      "Bonding with Pets",
+      "Family Dynamics"
+    ],
+    "Special Occasions": [
+      "First Birthday",
+      "First Christmas/Holiday",
+      "Baptism or Naming Ceremony",
+      "First Vacation"
+    ]
+  }
+}

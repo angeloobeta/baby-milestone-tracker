@@ -1,0 +1,81 @@
+{
+  "image": [
+    "attente",
+    "maternité",
+    "temps_de_qualité",
+    "voiture_jouet"
+  ],
+  "title": [
+    "Suivre les étapes clés du développement",
+    "Des conseils personnalisés rien que pour vous",
+    "Des souvenirs qui durent toute une vie",
+    "Une expérience fluide et intuitive"
+  ],
+  "subtitle": [
+    "Restez informé à chaque étape du chemin. Enregistrez et surveillez la croissance et les réalisations de votre bébé sans effort",
+    "Des conseils adaptés à votre bébé unique. Recevez des conseils d'experts basés sur le développement de votre bébé",
+    "Créez une capsule temporelle de moments précieux. Transformez chaque étape de bébé en un beau souvenir à chérir pour toujours",
+    "Un parcours sans effort à travers la parentalité. Profitez d'une interface intuitive pour un suivi sans stress et une parentalité joyeuse"
+  ],
+  "milestoneCategory": {
+    "Développement physique": [
+      "Retournement",
+      "Assis",
+      "Ramper",
+      "Debout",
+      "Premiers pas"
+    ],
+    "Développement cognitif": [
+      "Saisir des objets",
+      "Babillage",
+      "Premiers mots",
+      "Reconnaître les visages",
+      "Résolution de problèmes"
+    ],
+    "Développement social et émotionnel": [
+      "Sourire",
+      "Rire",
+      "Exprimer des émotions",
+      "Jouer à cache-cache",
+      "Établir des liens affectifs"
+    ],
+    "Alimentation et nutrition": [
+      "Premiers aliments solides",
+      "Auto-alimentation",
+      "Transition vers les gobelets",
+      "Introduction de nouveaux aliments",
+      "Sevrage"
+    ],
+    "Modèles de sommeil": [
+      "Dormir toute la nuit",
+      "Établir une routine du coucher",
+      "Transition vers un berceau",
+      "Suppression des siestes"
+    ],
+    "Santé et bien-être": [
+      "Vaccinations",
+      "Dentition",
+      "Première maladie",
+      "Poussées de croissance",
+      "Développement des compétences motrices"
+    ],
+    "Langage et parole": [
+      "Babillage",
+      "Premiers mots",
+      "Expansion du vocabulaire",
+      "Formation de phrases",
+      "Compréhension du langage"
+    ],
+    "Étapes avec frères et sœurs/Animaux de compagnie": [
+      "Interactions entre frères et sœurs",
+      "Créer des liens avec les animaux de compagnie",
+      "Dynamique familiale"
+    ],
+    "Occasions spéciales": [
+      "Premier anniversaire",
+      "Première fête de Noël / des fêtes",
+      "Baptême ou cérémonie de naming",
+      "Premières vacances"
+    ]
+  }
+}

@@ -1,3 +1,4 @@
+import 'package:baby_milestones_tracker/model/utilities/constants/localisation.dart';
 import 'package:baby_milestones_tracker/model/utilities/imports/generalImport.dart';
 
 class OnBoardingPage extends StatelessWidget {
@@ -9,7 +10,7 @@ class OnBoardingPage extends StatelessWidget {
         viewModelBuilder: () => OnBoardingViewModel(),
         disposeViewModel: false,
         builder: (context, model, child) =>
-            BaseUi(allowBackButton: false, safeTop: false, children: [
+            BaseUi(allowBackButton: false, safeTop: true, children: [
               // image
               Visibility(
                   child: (model.startOnboarding == true)
@@ -169,7 +170,7 @@ class OnBoardingPage extends StatelessWidget {
                                               w: 390,
                                               h: 100,
                                               child: GeneralTextDisplay(
-                                                "Welcome to Baby Milestones Tracker",
+                                                locale(context).welcomeMessage,
                                                 hexColor("010F07"),
                                                 2,
                                                 24,
@@ -185,7 +186,7 @@ class OnBoardingPage extends StatelessWidget {
                                               h: 120,
                                               w: 320,
                                               child: GeneralTextDisplay(
-                                                "Embark on the Journey of Parenthood. Capture and Celebrate Every Precious Moment with Your Little One",
+                                                locale(context).generalMessage,
                                                 hexColor("767676"),
                                                 5,
                                                 16,
@@ -199,7 +200,7 @@ class OnBoardingPage extends StatelessWidget {
                                               width: 340,
                                               height: 58,
                                               buttonColor: pink,
-                                              text: "Get started",
+                                              text: locale(context).getStarted,
                                               navigator: () {
                                             model.onStartOnboarding(context);
                                           }, top: 265)

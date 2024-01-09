@@ -1,0 +1,81 @@
+{
+  "image": [
+    "expectatio",
+    "materfamilias",
+    "tempus_qualitatis",
+    "autocinetum_ludibile"
+  ],
+  "title": [
+    "Observa Gradus Claves Developmenti",
+    "Consilium Personalizatum Tuum Solum",
+    "Memoriae Quae Vitam Durant",
+    "Experientia Facilis et Intuitiva"
+  ],
+  "subtitle": [
+    "Mane Informatus, Omnia Viae Gradu. Bambinum Tuum Crescere Monitorque Facile",
+    "Consilium Aptatum Bambino Tuo Unico. Consilium Capessas Peritus Ex Progressu Bambini Tui",
+    "Crea Capsulam Temporis Momentis Preciosis. Convertas Unamquamque Gradum Bambini in Memoriam Pulchram Semper Thesaurizandam",
+    "Iter Facile Per Parentatum. Delectare Interfacie Intuitiva Sine Cura et Parentatu Gaudio Pleno"
+  ],
+  "milestoneCategory": {
+    "Developmentus Physicus": [
+      "Retrovolvitur",
+      "Consurgens",
+      "Repens",
+      "Stans",
+      "Primae Gradus"],
+
+    "Developmentus Cognitivus": [
+      "Res Rapiens",
+      "Balbutiens",
+      "Primae Verba",
+      "Vultus Agnoscens",
+      "Solutio Problematis"],
+
+    "Developmentus Socialis et Emotivus": [
+      "Subridens",
+      "Risus",
+      "Emotiones Expressans",
+      "Ludens Celatus",
+      "Affectus Formans"
+    ],
+    "Alimentatio et Nutritio": [
+      "Prima Cibus Solidus",
+      "Auto-Alimentatio",
+      "Transitio ad Cyathos",
+      "Novorum Alimentorum Introduction",
+      "Abstinentia"
+    ],
+    "Patternus Somni": [
+      "Noctu Totam Dormire",
+      "Consuetudo Somni Instruens",
+      "Transitio ad Grabatum",
+      "Dimitterentium Siestas"
+    ],
+    "Sanitas et Bene": [
+      "Immunizationes",
+      "Dentitio",
+      "Prima Infirmatio",
+      "Pulsa Crescendi",
+      "Motus Motorius Desit"
+    ],
+    "Lingua et Oratio": [
+      "Balbutium",
+      "Primae Verba",
+      "Expansion Vocabuli",
+      "Formatio Sententiarum",
+      "Intellectus Linguae"
+    ],
+    "Gradus cum Fratribus/Sororibus/Animalibus Domestici": [
+      "Interactio inter Fratres et Sorores",
+      "Coniunctio cum Animalibus Domestici",
+      "Dynamica Familiae"
+    ],
+    "Occasiones Specialis": [
+      "Primum Natalis",
+      "Prima Nativitas/Feriae",
+      "Baptismus vel Nominatio",
+      "Prima Vacatio"
+    ]
+  }
+}
