@@ -23,19 +23,19 @@ class OnBoardingPage extends StatelessWidget {
                                 scrollDirection: Axis.horizontal,
                                 // onPageChanged: model.updateIndex,
                                 controller: model.pageController,
-                                itemCount: model.onBoardSlide.length,
+                                itemCount: model.onBoardSlide(context).length,
                                 itemBuilder: (context, index) => Stack(
                                       children: [
                                         rowPositioned(
                                           top: 10,
                                           // left: 10,
                                           // right: 10,
-                                          child: Container(
+                                          child: SizedBox(
                                               height:
                                                   sS(context).cH(height: 360),
                                               width: sS(context).cW(width: 350),
                                               child: SvgPicture.asset(
-                                                  "assets/svg/onboarding/${model.onBoardSlide.elementAt(index).image}.svg")
+                                                  "assets/svg/onboarding/${model.onBoardSlide(context).elementAt(index).image}.svg")
 
                                               // SvgImage(
                                               //   path:
@@ -52,7 +52,8 @@ class OnBoardingPage extends StatelessWidget {
                                             h: 150,
                                             w: 300,
                                             child: GeneralTextDisplay(
-                                              model.onBoardSlide
+                                              model
+                                                  .onBoardSlide(context)
                                                   .elementAt(index)
                                                   .title!,
                                               hexColor("010F07"),
@@ -70,7 +71,8 @@ class OnBoardingPage extends StatelessWidget {
                                             h: 120,
                                             w: 330,
                                             child: GeneralTextDisplay(
-                                              model.onBoardSlide
+                                              model
+                                                  .onBoardSlide(context)
                                                   .elementAt(index)
                                                   .subtitle!,
                                               hexColor("767676"),
@@ -89,8 +91,9 @@ class OnBoardingPage extends StatelessWidget {
                                             child: SmoothPageIndicator(
                                                 controller:
                                                     model.pageController,
-                                                count:
-                                                    model.onBoardSlide.length,
+                                                count: model
+                                                    .onBoardSlide(context)
+                                                    .length,
                                                 effect: WormEffect(
                                                   dotHeight:
                                                       sS(context).cH(height: 8),
@@ -104,13 +107,13 @@ class OnBoardingPage extends StatelessWidget {
                                         rowPositioned(
                                             top: 684,
                                             child: (index <
-                                                    model.onBoardSlide.length -
+                                                    model.onBoardSlide(context).length -
                                                         1)
                                                 ? buttonNoPositioned(context,
                                                     width: 340,
                                                     height: 58,
                                                     fontSize: 16,
-                                                    text: "Next",
+                                                    text: locale(context).next,
                                                     navigator: () => model
                                                         .pageController
                                                         .nextPage(
@@ -122,13 +125,13 @@ class OnBoardingPage extends StatelessWidget {
                                                                 .easeInOut),
                                                     buttonColor: pink,
                                                     textColor: white)
-                                                : (model.onBoardSlide.length -
-                                                            1 ==
+                                                : (model.onBoardSlide(context).length - 1 ==
                                                         index)
                                                     ? buttonNoPositioned(context,
                                                         width: 340,
                                                         height: 58,
-                                                        text: "Done",
+                                                        text: locale(context)
+                                                            .done,
                                                         fontSize: 16,
                                                         navigator: () {
                                                         router.goNamed(

@@ -118,7 +118,7 @@ class DashboardPage extends StatelessWidget {
                           ),
                           rowPositioned(
                             top: 460 - 150,
-                            child: Container(
+                            child: SizedBox(
                               height: sS(context).cH(height: 390),
                               width: sS(context).cW(width: 410),
                               child: Column(
@@ -135,15 +135,19 @@ class DashboardPage extends StatelessWidget {
                                       mainAxisSpacing:
                                           sS(context).cH(height: 8.0),
                                     ),
-                                    itemCount:
-                                        model.milestoneCategories.length - 3,
+                                    itemCount: model
+                                            .milestoneCategories(context)
+                                            .length -
+                                        3,
                                     itemBuilder:
                                         (BuildContext context, int index) {
                                       String category = model
-                                          .milestoneCategories.keys
+                                          .milestoneCategories(context)
+                                          .keys
                                           .elementAt(index);
                                       List<String> options =
-                                          model.milestoneCategories[category]!;
+                                          model.milestoneCategories(
+                                              context)[category]!;
                                       String backgroundImage =
                                           model.getRandomImage();
 

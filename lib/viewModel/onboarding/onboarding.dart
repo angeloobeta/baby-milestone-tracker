@@ -14,24 +14,27 @@ class OnBoardingViewModel extends BaseModel {
   }
 
   OnBoardingModel? onBoardingModel;
-  List<OnBoardingModel> onBoardSlide = [
-    OnBoardingModel(
-        image: "expecting",
-        title: locale(context as BuildContext).title1,
-        subtitle: locale(context as BuildContext).subtitle1),
-    OnBoardingModel(
-        image: "motherhood",
-        title: locale(context as BuildContext).title2,
-        subtitle: locale(context as BuildContext).subtitle2),
-    OnBoardingModel(
-        image: "quality_time",
-        title: locale(context as BuildContext).title3,
-        subtitle: locale(context as BuildContext).subtitle3),
-    OnBoardingModel(
-        image: "toy_car",
-        title: locale(context as BuildContext).title3,
-        subtitle: locale(context as BuildContext).subtitle3),
-  ];
+  List<OnBoardingModel> onBoardSlide(context) {
+    return [
+      OnBoardingModel(
+          image: "expecting",
+          title: locale(context).title1,
+          subtitle: locale(context).subtitle1),
+      OnBoardingModel(
+          image: "motherhood",
+          title: locale(context).title2,
+          subtitle: locale(context).subtitle2),
+      OnBoardingModel(
+          image: "quality_time",
+          title: locale(context).title3,
+          subtitle: locale(context).subtitle3),
+      OnBoardingModel(
+          image: "toy_car",
+          title: locale(context).title3,
+          subtitle: locale(context).subtitle3),
+    ];
+  }
+
   // default index
   int index = 0;
 

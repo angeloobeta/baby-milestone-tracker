@@ -4,7 +4,7 @@ import 'package:baby_milestones_tracker/viewModel/mileStone/mileStone.dart';
 import 'mileStoneDetail.dart';
 
 class AllMileStonePage extends StatelessWidget {
-  AllMileStonePage({super.key});
+  const AllMileStonePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,17 +19,19 @@ class AllMileStonePage extends StatelessWidget {
                     w: 400,
                     h: 800,
                     child: ListView.builder(
-                        itemCount: model.milestoneCategories.length,
+                        itemCount: model.milestoneCategories(context).length,
                         itemBuilder: (context, index) {
-                          String category =
-                              model.milestoneCategories.keys.elementAt(index);
+                          String category = model
+                              .milestoneCategories(context)
+                              .keys
+                              .elementAt(index);
                           List<String> options =
-                              model.milestoneCategories[category]!;
+                              model.milestoneCategories(context)[category]!;
                           String backgroundImage = model.getRandomImage();
                           String mileStoneInDetail = '';
                           for (String mileStone in options) {
                             mileStoneInDetail =
-                                mileStoneInDetail + "* $mileStone\n";
+                                "$mileStoneInDetail* $mileStone\n";
                           }
                           return GestureDetector(
                             onTap: () {
