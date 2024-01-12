@@ -6,4 +6,3 @@ export '../../utilities/constants/enums.dart';
 export '../../utilities/constants/routes.dart';
 export '../../utilities/constants/strings.dart';
 export '../../utilities/routeGenerator.dart';
-export '../functions/inputFormatters.dart';

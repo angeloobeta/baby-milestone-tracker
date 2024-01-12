@@ -2,7 +2,14 @@ import 'package:baby_milestones_tracker/model/utilities/constants/localisation.d
 import 'package:baby_milestones_tracker/model/utilities/imports/generalImport.dart';
 import 'package:carousel_slider/carousel_controller.dart';
 
-class DashBoardViewModel extends BaseModel {
+class DashBoardViewModel extends BaseModel with WidgetsBindingObserver {
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    super.didChangeAppLifecycleState(state);
+    WidgetsBinding.instance.addObserver(this);
+    print(state);
+  }
+
   bool seeMore = false;
   PageController pageController = PageController();
   int defaultIndex = 0;

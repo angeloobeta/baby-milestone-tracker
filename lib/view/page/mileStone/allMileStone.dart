@@ -27,7 +27,6 @@ class AllMileStonePage extends StatelessWidget {
                               .elementAt(index);
                           List<String> options =
                               model.milestoneCategories(context)[category]!;
-                          String backgroundImage = model.getRandomImage();
                           String mileStoneInDetail = '';
                           for (String mileStone in options) {
                             mileStoneInDetail =
